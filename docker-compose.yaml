@@ -1,0 +1,35 @@
+version: '3'
+services:
+  python1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      private_network:
+        ipv4_address: 10.0.1.11
+    command: tail -f /dev/null  # Keeps the container running
+
+  python2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      private_network:
+        ipv4_address: 10.0.1.12
+    command: tail -f /dev/null  # Keeps the container running
+
+  python3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      private_network:
+        ipv4_address: 10.0.1.13
+    command: tail -f /dev/null  # Keeps the container running
+
+networks:
+  private_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.1.0/24

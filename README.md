@@ -1,0 +1,3 @@
+This repository documents my progress through the official Ansible tutorial, encompassing key aspects such as installation, inventory management, playbooks, roles, and best practices. The tutorial is available at [Ansible Documentation](https://docs.ansible.com/ansible/latest/getting_started/get_started_ansible.html).
+
+To get started, ensure Ansible is installed on the control node and have access to managed nodes for testing. The repository serves as a practical resource, showcasing completed exercises, playbooks, and roles developed during the tutorial. 
